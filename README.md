@@ -26,7 +26,7 @@ Pythonla yazdığım bufferoverflow örneği;
 indiriyoruz. İkisini de yönetici olarak çalıştırmamız gerek. İmmunity debuggerdan vulnserver'ı takip etcez. Bunun için sol üstte bulunan attach kısmından vulnserver'ı seçin. Eğer gözükmüyorsa vulnserver'ı tekrar yönetici olarak çalıştırmayı deneyin. play tuşuna basarak takip edebiliriz. Çalıştığını sağ alttaki Ready/Running kısmından anlayabiliriz.
 ![immunity](https://user-images.githubusercontent.com/59103139/145373244-d63b56ef-3bfe-4287-bb9f-a5e7035673a9.PNG)
 
-![fuzzing](https://user-images.githubusercontent.com/59103139/145376900-567fe671-05a5-4b05-b473-bff255be6ed7.PNG)
+![fuzzingpy](https://user-images.githubusercontent.com/59103139/145388533-b7f303e0-c6e2-46b8-bad7-f94ed5454c6c.PNG)
 
 İlk olarak fuzzing kodumuzu yazalım.Kodu anlatmak gerekirse socket modülü bağlantı kurmamızı sağlar. Sleep modülü programın ne kadar süre bekletileceğini ayarlar. Bekletme amacımız server'a fazla yüklenmemek. sys modülü ise sistemde yapılabilecek işlemleri yönetir. 
 
